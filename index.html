@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sowmya Portfolio</title>
+    <style>
+        body {
+    color: #333;
+    background: linear-gradient(to right, #d88bed, #d950ff);
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+header {
+    background: linear-gradient(to right, #a822ad, #c2e9fb);
+    font-style: italic;
+    color: #110c0c;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home {
+    background: linear-gradient(to right, #a1c4fd, #a1c4fd);
+    padding: 60px;
+    text-align: center;
+    color: #110c0c;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #beb0b0;
+}
+
+#about {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+    padding: 60px 0;
+    text-align: center;
+}
+
+#education {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+    padding: 60px 0;
+    text-align: center;
+}
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.timeline-item {
+    background: #ebbdee;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(226, 211, 211, 0.1);
+    width: 80%;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-content h3 {
+    color: #6e099c;
+    margin-bottom: 5px;
+}
+
+.timeline-content span {
+    font-weight: italic;
+    color: #333;
+}
+
+.timeline-content p {
+    color: #666;
+}
+
+#skills {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+    padding: 60px 0;
+    text-align: center;
+}
+.certification-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+    margin-top: 40px; /* Space above the section */
+}
+
+.certification-card {
+    background: #e6a4e7; /* White background for cards */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    padding: 20px; /* Padding inside the card */
+    width: 300px; /* Fixed width for cards */
+    text-align: center; /* Center text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.certification-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(192, 62, 231, 0.2); /* Deeper shadow on hover */
+}
+
+.certification-card img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px; /* Rounded corners for images */
+    margin-bottom: 15px; /* Space below the image */
+}
+
+.certification-info h3 {
+    margin: 10px 0; /* Space above and below the title */
+    color: #6c63ff; /* Title color */
+}
+
+.certification-info p {
+    color: #666; /* Description color */
+    font-size: 14px; /* Font size for description */
+}
+
+#contact {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+    padding: 60px 0;
+    text-align: center;
+}
+
+footer {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+               * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            color: #333;
+            background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+            transition: background 0.5s ease;
+        }
+        header {
+            background-color: #363d47;
+            font-style: italic;
+            color: #fff;
+            padding: 20px 0;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar {
+            display: flex;
+            justify-content: right;
+            gap: 30px;
+        }
+        .navbar a {
+            color: #8c058c;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: #b6aec2;
+        }
+        .home {
+            background: linear-gradient(to bottom right, #a1c4fd, #c2e9fb);
+            padding: 60px;
+            text-align: center;
+            color: #0c0b0b;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .home-container {
+            max-width: 600px;
+            text-align: center;
+        }
+        .home-container h3, .home-container h1 {
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .home-container p {
+            line-height: 1.5;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .home-sci a {
+            display: inline-block;
+            margin: 0 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .home-sci a img {
+            border-radius: 50%;
+            transition: transform 3.0s ease;
+        }
+        .home-sci a:hover img {
+            transform: scale(1.8);
+            background-color: #decce6;
+        }
+        .image img {
+            border-radius: 50%;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        section {
+            padding: 60px 0;
+            text-align: right;
+        }
+        section h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #6e099c;
+        }
+ .certification-card {
+    background: #ffeafe;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 2px 0px papayawhip;
+    width:200px;
+    text-align: center;
+    transition: transform 2.8s ease, box-shadow 2.0s ease;
+}
+.certification-card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 px 30px pink;
+}
+
+.certification-icon {
+    font-size: 80px;
+    margin-bottom: 25px;
+    color: #6c63ff;
+}
+
+.certification-info h3 {
+    margin-bottom: 10px;
+    color: #6c63ff;
+}
+
+.certification-info p {
+    font-size: 20px;
+    color: #ce1616;
+}
+
+        #skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .skill-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+        .skill-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #6c63ff;
+        }
+        .skill-info h3 {
+            margin-bottom: 10px;
+            color: #6c63ff;
+        }
+        .skill-info p {
+            font-size: 16px;
+            color: #333;
+        }
+        #contact {
+    background: skyblue;
+    padding: 60px 0;
+}
+#contact {
+    background: #a8d3f6; /* Light background color for the contact section */
+    padding: 60px 0; /* Padding for top and bottom */
+}
+
+.contact-form {
+    max-width: 600px; /* Maximum width of the form */
+    margin: 0 auto; /* Center the form */
+    background:skyblue; /* White background for the form */
+    padding: 20px; /* Padding inside the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+.form-group label {
+    display: block; /* Make label a block element */
+    margin-bottom: 5px; /* Space below the label */
+    color: #333; /* Dark color for the label text */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Full width for inputs and textarea */
+    padding: 10px; /* Padding inside inputs and textarea */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for inputs and textarea */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #6c63ff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    background-color: #6c63ff; /* Primary button color */
+    color: #fff; /* White text color */
+    padding: 10px 15px; /* Padding for the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button text */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #5a54d1; /* Darker shade on hover */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Portfolio</h1>
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#Certifications">Certifications</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <section id="home" class="home">
+        <div class="home-container">
+            <h3>Hi, Myself</h3>
+            <h1>Sowmya</h1>
+            <h3>And</h3>
+            <p>I’m currently pursuing a BTech at SVR Engineering College. As I continue my studies, I am excited to deepen my knowledge in software engineering and work towards my goal of becoming a software developer.</p>
+            <div class="home-sci">
+                <a href="#"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19749.png" alt="Facebook" width="40" height="40"></a>
+                <a href="#"><img src="https://pngimg.com/uploads/instagram/instagram_PNG10.png" alt="Instagram" width="40" height="40"></a>
+                <a href="#"><img src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG38.png" alt="LinkedIn" width="40" height="40"></a>
+            </div>
+        </div>
+        <div class="image">
+            <img src="IMAGE.jpg" alt="Sowmya" width="150" height="150">
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p><i>I am an aspiring software developer, currently pursuing a BTech at SVR Engineering College. I have a passion for coding and a keen interest in learning new technologies. In my free time, I enjoy working on personal projects, reading tech blogs, and exploring new places. In addition to my academic pursuits, I enjoy working on personal projects that challenge my problem-solving abilities and allow me to apply my knowledge in practical scenarios. I am an active participant in coding competitions and hackathons, which have helped me develop teamwork and collaboration skills.</i></p>
+        </div>
+    </section>
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>SSC</h3>
+                        <span>VVS High School</span>
+                        <p>Year: 2020</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Diploma in Electronic Communication Engineering</h3>
+                        <span>Brindavan Institute Of Technology And Science</span>
+                        <p>Year: 2023</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>BTech in Computer Science</h3>
+                        <span>SVR Engineering College</span>
+                        <p>Expected Graduation: 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div id="skills">
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <div class="skill-info">
+                        <h3>HTML5</h3>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <div class="skill-info">
+                        <h3>CSS3</h3>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔧</div>
+                    <div class="skill-info">
+                        <h3>Git/GitHub</h3>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📜</div>
+                    <div class="skill-info">
+                        <h3>JavaScript</h3>
+                    </div>
+            </div>
+            <section id="certifications">
+                <div class="container">
+                    <h2>Certifications</h2>
+                    <div class="certification-section">
+                        <div class="certification-card">
+                            <div class="certification-header">
+                                <img src="Screenshot (2).png" alt="Certificate 1">
+                            </div>
+                            <div class="certification-body">
+                            
+                                <p>Issued by: Octanet</p>
+                            </div>
+                        </div>
+                        <div class="certification-card">
+                            <div class="certification-header">
+                                <img src="Screenshot (3).png" alt="Certificate 2">
+                            </div>
+                            <div class="certification-body">
+                                <p>Issued by: Edu Skills</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you would like to get in touch, feel free to reach out through the form below or via email at <a href="mailto:sowmyaadisowmya@gmail.com">sowmyaadisowmya@gmail.com</a>.</p>
+            <form action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
