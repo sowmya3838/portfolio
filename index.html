@@ -21,15 +21,62 @@ header {
 }
 
 .home {
-    background: linear-gradient(to right, #a1c4fd, #a1c4fd);
-    padding: 60px;
-    text-align: center;
-    color: #110c0c;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: #beb0b0;
+    background: linear-gradient(to bottom right, #a1c4fd, #c2e9fb); /* Gradient background */
+    padding: 80px; /* Padding for the section */
+    text-align: center; /* Center text */
+    color: #0c0b0b; /* Text color */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    border-radius: 15px; /* Rounded corners for the section */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.home-container {
+    max-width: 700px; /* Maximum width for the text container */
+    text-align: center; /* Center text in the container */
+    margin: 20px; /* Margin around the container */
+}
+
+.home-container h1 {
+    font-size: 2.5em; /* Larger font size for the main title */
+    margin-bottom: 10px; /* Space below the title */
+    color: #bd35e2; /* Title color */
+    font-style: italic;
+}
+
+.home-container h3 {
+    font-size: 1.5em; /* Slightly larger font size for subheading */
+    margin-bottom: 20px; /* Space below the subheading */
+}
+
+.home-container p {
+    line-height: 1.6; /* Improved line height for readability */
+    font-size: 1.1em; /* Slightly larger font size for paragraph */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+.home-sci {
+    display: flexbox; /* Use flexbox for social icons */
+    justify-content: center; /* Center the social icons */
+    gap: 20px; /* Space between icons */
+}
+
+.home-sci a img {
+    border-radius: 100%; /* Rounded icons */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.home-sci a:hover img {
+    transform: scale(1.1); /* Slightly enlarge icons on hover */
+}
+
+.image img {
+    border-radius: 100; /* Rounded profile image */
+    animation: fadeIn 5.0s ease-in-out; /* Fade-in effect for the image */
+    box-shadow: 0 4px 10px rgba(193, 24, 24, 0.2); /* Shadow for depth */
+    margin-top: 20px; /* Space above the image */
 }
 
 #about {
@@ -96,7 +143,7 @@ header {
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
     padding: 20px; /* Padding inside the card */
-    width: 300px; /* Fixed width for cards */
+    width: 200px; /* Fixed width for cards */
     text-align: center; /* Center text */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
@@ -225,36 +272,7 @@ footer {
             margin-bottom: 40px;
             color: #6e099c;
         }
- .certification-card {
-    background: #ffeafe;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 2px 0px papayawhip;
-    width:200px;
-    text-align: center;
-    transition: transform 2.8s ease, box-shadow 2.0s ease;
-}
-.certification-card:hover {
-    transform: translateY(-20px);
-    box-shadow: 0 px 30px pink;
-}
-
-.certification-icon {
-    font-size: 80px;
-    margin-bottom: 25px;
-    color: #6c63ff;
-}
-
-.certification-info h3 {
-    margin-bottom: 10px;
-    color: #6c63ff;
-}
-
-.certification-info p {
-    font-size: 20px;
-    color: #ce1616;
-}
-
+        
         #skills {
             display: flex;
             flex-wrap: wrap;
@@ -287,7 +305,36 @@ footer {
             font-size: 16px;
             color: #333;
         }
-        #contact {
+        .certification-section {
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Space between cards */
+    margin-top: 40px; /* Space above the section */
+    padding: 20px; /* Padding around the section */
+}
+#certifications {
+            text-align: center; /* Center the entire section */
+            padding: 60px 0; /* Padding for top and bottom */
+        }
+.certification-card {
+    background: #f9f3ff; /* Light purple background for cards */
+    border: 2px solid #6c63ff; /* Border color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    padding: 20px; /* Padding inside the card */
+    text-align: center; /* Center text */
+    width: 250px; /* Fixed width for cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.certification-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(192, 62, 231, 0.3); /* Deeper shadow on hover */
+}
+
+      #contact {
     background: skyblue;
     padding: 60px 0;
 }
@@ -354,7 +401,7 @@ button:hover {
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#education">Education</a>
-                <a href="#Certifications">Certifications</a>
+                <a href="#certifications">Certifications</a> <!-- Corrected link -->
                 <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -449,8 +496,10 @@ button:hover {
                                 <img src="Screenshot (2).png" alt="Certificate 1">
                             </div>
                             <div class="certification-body">
-                            
-                                <p>Issued by: Octanet</p>
+                                <div class="certification-info">
+                                    <h3>OCTANET</h3>
+                                    <p>Issued by: Octanet</p>
+                                </div>
                             </div>
                         </div>
                         <div class="certification-card">
@@ -458,7 +507,10 @@ button:hover {
                                 <img src="Screenshot (3).png" alt="Certificate 2">
                             </div>
                             <div class="certification-body">
-                                <p>Issued by: Edu Skills</p>
+                                <div class="certification-info">
+                                    <h3>EDU SKILLS</h3>
+                                    <p>Issued by: Edu Skills</p>
+                                </div>
                             </div>
                         </div>
                     </div>
